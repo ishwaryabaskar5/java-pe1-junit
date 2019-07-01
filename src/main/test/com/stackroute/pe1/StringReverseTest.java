@@ -1,49 +1,51 @@
 package com.stackroute.pe1;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class StringReverseTest {
 	
-	StringReverse stringReverse = new StringReverse();
+	StringReverse stringReverse;
 	
-	@org.junit.Before
-	public void setUp() throws Exception {
+	@Before
+	public void setUp() {
+		stringReverse = new StringReverse();
 	}
 	
-	@org.junit.After
-	public void tearDown() throws Exception {
+	@After
+	public void tearDown() {
+		stringReverse = null;
 	}
 	
 	@Test
-	public void reverseValidString(){
+	public void givenInputShouldReturnReversedString(){
 
 //		Act
 		String result = stringReverse.reverseString("hello world");
-		System.out.println("Test1");
 
 //		Assert
 		assertEquals("dlrow olleh", result);
+		
 	}
 
 	@Test
-	public void reverseEmptyString(){
+	public void givenInputShouldReturnEmptyString(){
 
 //		Act
 		String result = stringReverse.reverseString("");
-		System.out.println("Test2");
 
 //  	Assert
 		assertEquals("", result);
 	}
 
 	@Test
-	public void reverseNullString(){
+	public void givenInputShouldReturnException(){
 
 //		Act
 		String result = stringReverse.reverseString(null);
-		System.out.println("Test3");
 
 //  	Assert
 		assertEquals("Exception", result);

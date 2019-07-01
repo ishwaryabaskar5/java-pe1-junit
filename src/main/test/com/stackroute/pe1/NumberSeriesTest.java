@@ -1,38 +1,40 @@
 package com.stackroute.pe1;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class NumberSeriesTest {
 	
-	NumberSeries numberSeries = new NumberSeries();
+	NumberSeries numberSeries;
 	
-	@org.junit.Before
+	@Before
 	public void setUp() throws Exception {
+		numberSeries = new NumberSeries();
 	}
 	
-	@org.junit.After
+	@After
 	public void tearDown() throws Exception {
+		numberSeries = null;
 	}
 	
 	@Test
-	public void generateSeriesForPositiveInteger(){
+	public void givenInputShouldReturnIntegerSeries(){
 
 //		Act
 		String result = numberSeries.generateSeries(3);
-		System.out.println("Test1");
 
 //		Assert
 		assertEquals("122333", result);
 	}
 	
 	@Test
-	public void generateSeriesForNegativeInteger(){
+	public void givenInputShouldReturnErrorMessage(){
 
 //		Act
 		String result = numberSeries.generateSeries(-5);
-		System.out.println("Test2");
 
 //  	Assert
 		assertEquals("Please enter a positive integer", result);

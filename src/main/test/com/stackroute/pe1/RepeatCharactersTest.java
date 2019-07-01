@@ -1,37 +1,39 @@
 package com.stackroute.pe1;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class RepeatCharactersTest {
-	RepeatCharacters repeatCharacters = new RepeatCharacters();
+	RepeatCharacters repeatCharacters;
 	
-	@org.junit.Before
-	public void setUp() throws Exception {
+	@Before
+	public void setUp() {
+		repeatCharacters = new RepeatCharacters();
 	}
 	
-	@org.junit.After
-	public void tearDown() throws Exception {
+	@After
+	public void tearDown() {
+		repeatCharacters = null;
 	}
 	
 	@Test
-	public void repeatStringWhileGivingPositiveInteger(){
+	public void givenInputShouldReturnRepeatedString(){
 
 //		Act
 		String result = repeatCharacters.repeatSubString("hello",3);
-		System.out.println("Test1");
 
 //		Assert
 		assertEquals("TestPassed","hellollollollo", result);
 	}
 	
 	@Test
-	public void repeatStringWhileGivingNegativeInteger(){
+	public void givenInputShouldReturnErrorMessage(){
 
 //		Act
 		String result = repeatCharacters.repeatSubString("hello",-2);
-		System.out.println("Test2");
 
 //  	Assert
 		assertEquals("TestPassed","Error:Please enter a positive integer", result);

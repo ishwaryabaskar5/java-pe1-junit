@@ -5,55 +5,53 @@ import org.junit.*;
 
 public class CharacterIdentificationTest {
 	
-	CharacterIdentification characterIdentification = new CharacterIdentification();
+	CharacterIdentification characterIdentification;
 	
 	@Before
 	public void setUp()  {
+		characterIdentification = new CharacterIdentification();
 	}
 	
 	@After
 	public void tearDown()  {
+		characterIdentification = null;
 	}
 	
 	@Test
-	public void identifySmallCases(){
+	public void givenInputShouldReturnSmallCaseLetter(){
 
 //		Act
 		String result = characterIdentification.identifyCharacter('a');
-		System.out.println("Test1");
 		
 //		Assert
 		assertEquals("Small case letter", result);
 	}
 	
 	@Test
-	public void identifyCapitalCases(){
+	public void givenInputShouldReturnCapitalLetter(){
 
 //		Act
 		String result = characterIdentification.identifyCharacter('A');
-		System.out.println("Test2");
 
 //  	Assert
 		assertEquals("Capital letter", result);
 	}
 	
 	@Test
-	public void identifyDigits(){
+	public void givenInputShouldReturnDigit(){
 
 //		Act
 		String result = characterIdentification.identifyCharacter('4');
-		System.out.println("Test3");
 
 //  	Assert
 		assertEquals("Digit", result);
 	}
 	
 	@Test
-	public void identifySymols(){
+	public void givenInputShouldReturnCapitalSymbol(){
 
 //		Act
 		String result = characterIdentification.identifyCharacter('+');
-		System.out.println("Test4");
 
 //  	Assert
 		assertEquals("Symbol", result);

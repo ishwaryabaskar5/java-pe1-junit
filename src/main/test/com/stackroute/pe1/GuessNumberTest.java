@@ -8,44 +8,43 @@ import static org.junit.Assert.*;
 
 public class GuessNumberTest {
 	
-	GuessNumber guessNumber = new GuessNumber();
+	GuessNumber guessNumber;
 	
 	@Before
 	public void setUp()  {
+		guessNumber = new GuessNumber();
 	}
 	
 	@After
 	public void tearDown()  {
+		guessNumber = null;
 	}
 	
 	@Test
-	public void guessSmallerNumber(){
+	public void givenInputShouldReturnGuessedNumberIsLess(){
 
 //		Act
 		String result = guessNumber.guessNumber(5);
-		System.out.println("Test1");
 
 //		Assert
 		assertEquals("OOPS!! GUESS AGAIN..Number guessed is less than original number", result);
 	}
 	
 	@Test
-	public void guessGreaterNumber(){
+	public void givenInputShouldReturnGuessedNumberIsGreater(){
 
 //		Act
 		String result = guessNumber.guessNumber(47);
-		System.out.println("Test2");
 
 //  	Assert
 		assertEquals("OOPS!! GUESS AGAIN..Number guessed is more than original number", result);
 	}
 	
 	@Test
-	public void guessCorrectNumber(){
+	public void givenInputShouldReturnGuessedNumberIsCorrect(){
 
 //		Act
 		String result = guessNumber.guessNumber(30);
-		System.out.println("Test3");
 
 //  	Assert
 		assertEquals("HURRAY!!  YOU ARE CORRECT!!", result);

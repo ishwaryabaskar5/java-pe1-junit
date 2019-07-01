@@ -2,9 +2,9 @@ package com.stackroute.pe1;
 
 import java.util.Scanner;
 
-public class TomJerry {
+public class EvenOrOddChecker {
 	
-	public String verifyTomOrJerry(int num){
+	public String verifyEvenOrOdd(int num){
 	
 //		checks for num is between 20 and 30
 		if(num>20 && num<30){

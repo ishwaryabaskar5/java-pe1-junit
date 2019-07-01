@@ -1,19 +1,30 @@
 package com.stackroute.pe1;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class SortingTest {
 	
-	Sorting sorting = new Sorting();
+	Sorting sorting;
+	
+	@Before
+	public void setUp() {
+		sorting = new Sorting();
+	}
+	
+	@After
+	public void tearDown() {
+		sorting = null;
+	}
 	
 	@Test
-	public void sortInteger(){
+	public void givenInputShouldReturnSortedNumber(){
 
 //		Act
 		int result = sorting.sort(73914);
-		System.out.println("Test1");
 
 //		Assert
 		assertEquals("TestPassed",97431, result);
@@ -21,11 +32,10 @@ public class SortingTest {
 
 	
 	@Test
-	public void sortIntegerWhichContainsZero(){
+	public void givenInputShouldReturnSortrdIntegerWhichContainsZero(){
 
 //		Act
 		int result = sorting.sort(43024);
-		System.out.println("Test3");
 
 //  	Assert
 		assertEquals("TestPassed",44320, result);

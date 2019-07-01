@@ -10,7 +10,7 @@
 //
 ////		Instantiation
 //		Palindrome palindrome = new Palindrome();
-//		TomJerry tomJerry = new TomJerry();
+//		EvenOrOddChecker tomJerry = new EvenOrOddChecker();
 //		VowelConsonant vowelConsonant = new VowelConsonant();
 //		NumberSeries numberSeries = new NumberSeries();
 //		SumOfArray sumOfArray = new SumOfArray();
@@ -22,7 +22,7 @@
 //
 ////		Print the options
 //		System.out.println("Enter the option");
-//		System.out.println("1.Palindrome\t2.TomJerry\t3.VowelConstant");
+//		System.out.println("1.Palindrome\t2.EvenOrOddChecker\t3.VowelConstant");
 //		System.out.println("4.NumberSeries\t5.SumOfArray\t6.CharacterIdentification");
 //		System.out.println("7.Sorting\t8.GuessNumber\t9.StringReverse\t10.RepeatSubstring");
 //
